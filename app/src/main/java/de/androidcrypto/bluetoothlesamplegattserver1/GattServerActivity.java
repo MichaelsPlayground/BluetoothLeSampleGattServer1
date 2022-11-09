@@ -82,7 +82,7 @@ public class GattServerActivity extends AppCompatActivity {
         super.onStart();
         // Register for system clock events
         IntentFilter filter = new IntentFilter();
-        filter.addAction(Intent.ACTION_TIME_TICK);
+        filter.addAction(Intent.ACTION_TIME_TICK); // forces an update every minute
         filter.addAction(Intent.ACTION_TIME_CHANGED);
         filter.addAction(Intent.ACTION_TIMEZONE_CHANGED);
         registerReceiver(mTimeReceiver, filter);
@@ -355,7 +355,8 @@ public class GattServerActivity extends AppCompatActivity {
                 }
                 mBluetoothGattServer.sendResponse(device,
                         requestId,
-                        BluetoothGatt.GATT_FAILURE,
+                        BluetoothGatt.GATT_SUCCESS,
+                        // BluetoothGatt.GATT_FAILURE,
                         0,
                         returnValue);
             } else {

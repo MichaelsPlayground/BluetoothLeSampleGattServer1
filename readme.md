@@ -12,6 +12,12 @@ and implements the server role of the GATT
 
 Org Source: https://github.com/androidthings/sample-bluetooth-le-gattserver
 
+**Note**: This app is corresponding with the BluetoothLeGatt app from Android's connectivity-samples 
+found here: https://github.com/android/connectivity-samples/tree/main/BluetoothLeGatt. 
+The app in the connectivity-samples is not up to date and will not run on modern Android devices, 
+an **updated** app is available here: https://github.com/AndroidCrypto/BluetoothLeGattSdk33.
+
+
 ## Pre-requisites
 
 - Android Things compatible board
